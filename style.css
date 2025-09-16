@@ -1,0 +1,222 @@
+/* Mengatur font, background, dan reset margin/padding untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== PROFILE SECTION ===== */
+/* Container utama profil - mengatur layout vertikal dan posisi tengah */
+.profile-container {
+    display: flex;                    /* Menggunakan flexbox */
+    flex-direction: column;           /* Susunan elemen secara vertikal */
+    align-items: center;              /* Rata tengah horizontal */
+    justify-content: center;          /* ➜ Rata tengah secara vertikal */
+    margin-top: 10px;                 /* Jarak dari atas */
+    margin-bottom: 20px;              /* Jarak ke bawah */
+    background: linear-gradient(135deg, #a4a3a3 0%, #ffcccc 100%); /* Gradient abu-abu ke pink */
+    height: 400px;                     /*ukuran kontainer*/
+}
+
+/* Styling untuk gambar profil - bentuk bulat dengan efek hover */
+.profile-img {
+    border-radius: 50%;               /* Membuat gambar berbentuk lingkaran */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Bayangan lembut */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animasi smooth saat hover */
+}
+.profile-img:hover {
+    transform: scale(1.07);           /* Memperbesar 7% saat hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18); /* Bayangan lebih tegas saat hover */
+}
+
+/* Styling untuk nama profil */
+.profile-name {
+    margin: 15px 0 5px 0;             /* Jarak atas 15px, bawah 5px */
+    color: #333;                      /* Warna teks abu gelap */
+}
+
+/* Styling untuk deskripsi profil */
+.profile-desc {
+    color: #666;                      /* Warna teks abu sedang */
+    margin-bottom: 10px;              /* Jarak ke bawah */
+}
+
+/* ===== ABOUT SECTION ===== */
+/* Container untuk bagian About - layout terpusat dengan lebar maksimal */
+.about-container {
+    max-width: 600px;                 /* Lebar maksimal 600px */
+    margin: 0 auto 30px auto;         /* Rata tengah horizontal, margin bawah 30px */
+    background: none;                 /* Tanpa background */
+    padding: 0;                       /* Tanpa padding */
+    border-radius: 0;                 /* Tanpa border radius */
+    box-shadow: none;                 /* Tanpa bayangan */
+    margin-left: auto;                /* Rata tengah (redundant) */
+    margin-right: auto;               /* Rata tengah (redundant) */
+    display: flex;                    /* Flexbox layout */
+    flex-direction: column;           /* Susunan vertikal */
+    align-items: center;              /* Rata tengah horizontal */
+}
+
+/* ===== SKILLS SECTION ===== */
+/* Container utama untuk bagian Skills */
+.skills-container {
+    max-width: 900px;                 /* Lebar maksimal 900px */
+    margin: 0 auto 40px auto;         /* Rata tengah, margin bawah 40px */
+    margin-left: auto;                /* Rata tengah (redundant) */
+    margin-right: auto;               /* Rata tengah (redundant) */
+    display: flex;                    /* Flexbox layout */
+    flex-direction: column;           /* Susunan vertikal */
+    align-items: center;              /* Rata tengah horizontal */
+}
+
+/* Container untuk kartu-kartu skill - layout horizontal */
+.skills-cards {
+    display: flex;                    /* Flexbox untuk susunan horizontal */
+    gap: 30px;                        /* Jarak antar kartu 30px */
+    justify-content: center;          /* Rata tengah horizontal */
+    margin-top: 20px;                 /* Jarak dari atas */
+}
+
+/* Styling individual kartu skill dengan efek hover interaktif */
+.skill-card {
+    background: #fff;                 /* Background putih */
+    border-radius: 10px;              /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Bayangan lembut */
+    width: 250px;                     /* Lebar tetap 250px */
+    padding: 25px 15px;               /* Padding vertikal 25px, horizontal 15px */
+    text-align: center;               /* Teks rata tengah */
+    transition: box-shadow 0.2s, transform 0.2s; /* Animasi smooth */
+}
+
+.skill-card:hover {
+    box-shadow: 0 8px 16px rgba(237, 138, 171, 0.18); /* Bayangan*/
+    transform: translateY(-4px) scale(1.03); /* Naik 4px dan membesar 3% */
+    cursor: pointer;                  /* Kursor pointer saat hover */
+}
+
+/* Styling untuk ikon di dalam kartu skill */
+.skill-icon {
+    font-size: 48px;                  /* Ukuran font besar untuk ikon */
+    margin-bottom: 10px;              /* Jarak ke bawah */
+}
+
+/* Styling untuk judul dalam kartu skill */
+.skill-card h3 {
+    color: #333;                      /* Warna abu gelap */
+    margin: 10px 0;                   /* Margin vertikal 10px */
+}
+
+/* Styling untuk paragraf dalam kartu skill */
+.skill-card p {
+    color: #666;                      /* Warna abu sedang */
+    line-height: 1.5;                 /* Tinggi baris 1.5x untuk readability */
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+/* Container utama untuk bagian Portfolio */
+.portfolio-container {
+    max-width: 900px;                 /* Lebar maksimal 900px */
+    margin: 0 auto 40px auto;         /* Rata tengah, margin bawah 40px */
+    display: flex;                    /* Flexbox layout */
+    flex-direction: column;           /* Susunan vertikal */
+    align-items: center;              /* Rata tengah horizontal */
+}
+
+/* Container untuk kartu-kartu portfolio - layout horizontal */
+.portfolio-cards {
+    display: flex;                    /* Flexbox untuk susunan horizontal */
+    gap: 30px;                        /* Jarak antar kartu 30px */
+    justify-content: center;          /* Rata tengah horizontal */
+    margin-top: 20px;                 /* Jarak dari atas */
+}
+
+/* Styling individual kartu portfolio dengan efek hover */
+.portfolio-card {
+    background: #fff;                 /* Background putih */
+    border-radius: 10px;              /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Bayangan lembut */
+    width: 250px;                     /* Lebar tetap 250px */
+    padding: 25px 15px;               /* Padding vertikal 25px, horizontal 15px */
+    text-align: center;               /* Teks rata tengah */
+    display: flex;                    /* Flexbox untuk konten internal */
+    flex-direction: column;           /* Susunan vertikal konten */
+    align-items: center;              /* Rata tengah konten */
+    transition: box-shadow 0.2s, transform 0.2s; /* Animasi smooth */
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 8px 16px rgba(237, 138, 171, 0.18); /* Bayangan*/
+    transform: translateY(-4px) scale(1.03); /* Naik 4px dan membesar 3% */
+    cursor: pointer;                  /* Kursor pointer saat hover */
+}
+
+/* Styling untuk gambar dalam kartu portfolio */
+.portfolio-img {
+    width: 270px;                     /* Lebar 270px */
+    height: 150px;                    /* Tinggi 150px */
+    object-fit: cover;                /* Crop gambar agar sesuai dimensi */
+    border-radius: 8px;               /* Sudut melengkung */
+    margin-bottom: 10px;              /* Jarak ke bawah */
+}
+
+/* ===== CONTACT SECTION ===== */
+/* Container utama untuk bagian Contact */
+.contact-container {
+    max-width: 600px;                 /* Lebar maksimal 600px */
+    margin: 0 auto 40px auto;         /* Rata tengah, margin bawah 40px */
+    display: flex;                    /* Flexbox layout */
+    flex-direction: column;           /* Susunan vertikal */
+    align-items: center;              /* Rata tengah horizontal */
+}
+
+/* Styling untuk setiap baris contact dengan efek hover */
+.contact-row {
+    display: flex;                    /* Flexbox untuk layout horizontal */
+    align-items: center;              /* Rata tengah vertikal */
+    width: 100%;                      /* Lebar penuh */
+    margin-bottom: 15px;              /* Jarak ke bawah */
+    transition: box-shadow 0.2s, transform 0.2s; /* Animasi smooth */
+}
+
+.contact-row:hover {
+    box-shadow: 0 8px 16px rgba(237, 138, 171, 0.18); /* Bayangan*/
+    transform: translateY(-4px) scale(1.03); /* Naik 4px dan membesar 3% */
+    cursor: pointer;                  /* Kursor pointer saat hover */
+}
+
+/* Styling untuk ikon contact */
+.contact-icon {
+    font-size: 28px;                  /* Ukuran font untuk ikon */
+    margin-right: 12px;               /* Jarak ke kanan */
+}
+
+/* Styling untuk label contact (Bold) */
+.contact-label {
+    font-weight: bold;                /* Teks tebal */
+    color: #333;                      /* Warna abu gelap */
+    margin-right: 8px;                /* Jarak ke kanan */
+}
+
+/* Styling untuk value/isi contact */
+.contact-value {
+    color: #666;                      /* Warna abu sedang */
+    word-break: break-all;            /* Potong kata panjang jika perlu */
+}
+
+/* Styling untuk link dalam contact value */
+.contact-value a {
+    color: #4285f4;                   /* Warna biru Google */
+    text-decoration: none;            /* Hilangkan underline */
+}
+
+/* ===== FOOTER SECTION ===== */
+/* Styling untuk footer copyright */
+.footer-copyright {
+    width: 100%;                      /* Lebar penuh */
+    text-align: center;               /* Teks rata tengah */
+    padding: 18px 0 12px 0;           /* Padding atas 18px, bawah 12px */
+    color: #000000;                   /* Warna teks hitam */
+    font-size: 15px;                  /* Ukuran font */
+    background: linear-gradient(135deg, #a4a3a3 0%, #ffcccc 100%); /* Gradient abu-abu ke pink */
+}
